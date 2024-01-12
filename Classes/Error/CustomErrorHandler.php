@@ -25,6 +25,7 @@ class CustomErrorHandler implements PageErrorHandlerInterface
         // use reason and message to decide what to do
         if(
             array_key_exists('code', $reasons) &&
+            $reasons['code'] === 'page' &&
             $message === 'The requested page does not exist'
         ) {
             return new RedirectResponse('/custom-page-does-not-exist', $this->statusCode);
@@ -33,3 +34,4 @@ class CustomErrorHandler implements PageErrorHandlerInterface
         return new RedirectResponse('/' . $this->statusCode, $this->statusCode);
     }
 }
+
