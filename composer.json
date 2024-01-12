@@ -1,0 +1,30 @@
+{
+  "name": "passionweb/custom-error-handler",
+  "license": "GPL-3.0",
+  "description": "Adds a custom error handler which redirect to a predefined page based on given error and/or status code. (TYPO3 CMS)",
+  "type": "typo3-cms-extension",
+  "homepage": "https://www.passionweb.de",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Manuel Schnabel",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "typo3/cms-core": "^12.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Passionweb\\CustomErrorHandler\\": "Classes/"
+    }
+  },
+  "replace": {
+      "typo3-ter/custom-error-handler": "self.version"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "custom_error_handler"
+    }
+  }
+}

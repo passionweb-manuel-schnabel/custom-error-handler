@@ -1,0 +1,7 @@
+errorHandling:
+  - errorCode: 404
+    errorHandler: PHP
+    errorPhpClassFQCN: Passionweb\CustomErrorHandler\Error\CustomErrorHandler
+  - errorCode: 403
+    errorHandler: PHP
+    errorPhpClassFQCN: Passionweb\CustomErrorHandler\Error\CustomErrorHandler
